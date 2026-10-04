@@ -1,0 +1,44 @@
+name: Algo no funciona / Something does not work
+description: Cuéntanos qué ha fallado / Tell us what went wrong
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisar / Thanks for letting us know. Antes de publicar, quita lo que no quieras que se vea (rutas con tu nombre, claves de API…) / Before posting, remove anything private (paths with your name, API keys…).
+  - type: input
+    id: version
+    attributes:
+      label: Versión / Version
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Dónde lo usas / Where you use it
+      description: Ventana, línea de comandos o web (Docker) / Window, command line or web (Docker)
+  - type: input
+    id: system
+    attributes:
+      label: Sistema / System
+  - type: textarea
+    id: what
+    attributes:
+      label: ¿Qué ha pasado? / What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: ¿Qué esperabas que pasara? / What did you expect?
+  - type: textarea
+    id: steps
+    attributes:
+      label: Cómo repetirlo / How to reproduce it
+      description: Si es con un archivo concreto, basta con su nombre original (sin la ruta) / For a specific file, its original name is enough (without the path)
+  - type: textarea
+    id: logs
+    attributes:
+      label: Mensajes de error / Error messages (opcional)
+      description: En la ventana, `errores.log` está en la carpeta de datos de ShowShelf (`%APPDATA%\ShowShelf`). Contiene rutas: revísalo antes de pegarlo.
+      render: text

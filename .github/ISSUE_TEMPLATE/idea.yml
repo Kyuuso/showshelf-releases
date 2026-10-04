@@ -1,0 +1,19 @@
+name: Tengo una idea / I have an idea
+description: Algo que te gustaría que hiciera ShowShelf / Something you would like ShowShelf to do
+labels: ["enhancement"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Versión / Version
+  - type: textarea
+    id: idea
+    attributes:
+      label: ¿Qué te gustaría que hiciera? / What would you like it to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: ¿Para qué lo usarías? / What would you use it for?
+      description: Un ejemplo real ayuda mucho / A real example helps a lot
